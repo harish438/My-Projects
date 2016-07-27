@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+<h2>You are Successfully Logged In.</h2>
+
+@if (Session["UserId"]!=null)
+    {
+    <h3> Hello, @Session["UserName"].ToString() </h3>
+    <br />
+    <br />
+    <br />
+    <p style="color:mediumseagreen">
+        <marquee><h2> ====^==== Welcome to MVC World ====^====</h2></marquee>
+    </p>
+    <p>@Html.ActionLink("Logout","LogIn","Account")</p>
+}   
